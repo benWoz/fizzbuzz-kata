@@ -9,7 +9,7 @@ Feature: Play Fizz Buzz game
   Examples:
     | call | response |
     | 1    | 1        |
-    | 2    | 3        |
+    | 2    | 2        |
 
   Scenario Outline: A number divisible by 3 is called
     When I'm given "<call>" I'll respond with fizz
@@ -24,3 +24,4 @@ Feature: Play Fizz Buzz game
     | call |
     | 5    |
     | 10   |
+
