@@ -30,3 +30,5 @@ Feature: Play Fizz Buzz game
   Examples:
     | call |
     | 15   |
+    | 30   |
+    | 45   |

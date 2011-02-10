@@ -1,7 +1,9 @@
 def fizzbuzz (call)
-  return "fizz" if fizzable?(call)
-  return "buzz" if buzzable?(call)
-  call
+  response = ""
+  response << "fizz" if fizzable?(call)
+  response << "buzz" if buzzable?(call)
+  response = call if response == ""
+  response
 end
 
 def fizzable?(call)
@@ -13,7 +15,7 @@ def buzzable?(call)
 end
 
 When /^I'm given "([^"]*)" I'll respond with "([^"]*)"$/ do |call, response|
-  fizzbuzz(call).to_s.should == response
+  fizzbuzz(call).should == response
 end
 
 When /^I'm given "([^"]*)" I'll respond with fizz$/ do |call|
@@ -21,7 +23,10 @@ When /^I'm given "([^"]*)" I'll respond with fizz$/ do |call|
 end
 
 When /^I'm given "([^"]*)" I'll respond with buzz$/ do |call|
-  #puts "@call is #{@call} and @response is #{@response}"
   fizzbuzz(call).should == "buzz"
+end
+
+When /^I'm given "([^"]*)" I'll respond with fizzbuzz$/ do |call|
+  fizzbuzz(call).should == "fizzbuzz"
 end
 
