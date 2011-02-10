@@ -5,5 +5,5 @@ Feature: Play Fizz Buzz game
   So that I can drink another day
 
   Scenario: A simple number is called
-    When I'm given a simple number
-    Then I will respond with that number
+    When I'm given "1"
+    Then I will respond with "1"
