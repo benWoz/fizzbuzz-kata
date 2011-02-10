@@ -25,3 +25,8 @@ Feature: Play Fizz Buzz game
     | 5    |
     | 10   |
 
+  Scenario Outline: A number divisible by both 3 & 5 is called
+    When I'm given "<call>" I'll respond with fizzbuzz
+  Examples:
+    | call |
+    | 15   |
